@@ -1,2 +1,51 @@
-## About This Project
-Marketplaces have become essential platforms for e-commerce transactions, where product reputation is heavily influenced by customer reviews. This study aims to enhance sentiment analysis of product reviews for "kemeja pria" on Bukalapak using Natural Language Processing (NLP) techniques. The review data underwent pre-processing steps such as cleaning, case folding, normalization, tokenizing, stopword removal, and stemming to refine the language and clarify the meaning of comments. The developed model, which uses a Lexicon-Based approach with the InSet Lexicon and Multinomial Naïve Bayes, performed better than RapidMiner, achieving a precision of 94%, a recall of 99% for positive sentiments, and an accuracy between 91% and 94%. However, the recall for neutral reviews was recorded at 0% due to dataset imbalance, indicating a potential overfitting issue. In comparison, RapidMiner only achieved a maximum precision of 17.70%, a recall of 50%, and an accuracy between 39.04% and 44.57%. Further analysis revealed that positive reviews generally highlighted product quality, fast shipping, and customer satisfaction, while negative reviews were mostly about defective products and incorrect sizing. These findings provide guidance for sellers to improve product quality and services based on customer reviews.
+# Sentiment Analysis of Bukalapak Product Reviews
+
+## 📌 About This Project
+
+Marketplaces like Bukalapak play a crucial role in e-commerce, where product reputation is shaped by customer reviews. This project focuses on performing sentiment analysis on "kemeja pria" reviews using Natural Language Processing (NLP) techniques to classify sentiments into positive, neutral, or negative.
+
+The model combines a Lexicon-Based method using the **InSet Lexicon** and a machine learning approach with **Multinomial Naïve Bayes**. It outperformed RapidMiner, achieving:
+
+- 🎯 **Precision:** 94% (Positive Class)  
+- 🔁 **Recall:** 99% (Positive Class)  
+- ✅ **Accuracy:** Between 91% and 94%
+
+While positive sentiments were mostly about product quality and fast delivery, negative ones addressed product defects and incorrect sizes.
+
+---
+
+## 🧠 Modeling Workflow
+
+1. **Scraping**: Data was scraped from Bukalapak using the platform’s API, focusing on product review content.
+2. **Storage**: Raw data (reviewer, title, content) is stored in a database.
+3. **Preprocessing**:
+   - Cleaning  
+   - Case Folding  
+   - Normalization  
+   - Tokenizing  
+   - Stopword Removal  
+   - Stemming  
+4. **Labeling**: Using InSet Lexicon to assign sentiment labels (Positive, Neutral, Negative).
+5. **Splitting**: Dataset split into 5 training/testing scenarios (90:10, 80:20, etc.)
+6. **Vectorization**: TF-IDF applied to measure word importance.
+7. **Classification**: Performed using Multinomial Naïve Bayes.
+8. **Evaluation**: Using confusion matrix, precision, recall, accuracy, and visualization tools like word cloud and bar charts.
+
+---
+
+## 📊 Visualization Outputs
+
+- Word Cloud of frequently used sentiment words  
+- Bar Chart of sentiment distribution  
+- Confusion Matrix summary  
+- Precision, Recall, and Accuracy metrics
+
+---
+
+## 📬 Contact
+
+Feel free to reach out via [brianadambhagaskara@gmail.com](mailto:brianadambhagaskara@gmail.com) for collaboration or feedback.
+
+---
+
+
